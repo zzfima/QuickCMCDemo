@@ -44,6 +44,10 @@ namespace QuickCMCDemo.MVVMCross.ViewModel
                 Phase = random.NextDouble() * 120,
                 Magnitud = random.NextDouble()
             }));
+
+            Array analogInputModeValues = Enum.GetValues(typeof(AnalogInputMode));
+            AnalogInputMode randomAnalogInputMode = (AnalogInputMode)analogInputModeValues.GetValue(random.Next(analogInputModeValues.Length));
+            _messenger?.Publish(new AnalogInputModeChanged(this, randomAnalogInputMode));
         }
 
         #region Dependency Properties
