@@ -8,7 +8,9 @@ namespace QuickCMCDemo.MVVMCross.ViewModel
     public sealed class AnalogOutputsViewModel : MvxViewModel
     {
         #region Fields
-        private MvxSubscriptionToken? _token;
+        private MvxSubscriptionToken? _token_V_A_NChanged;
+        private MvxSubscriptionToken? _token_V_B_NChanged;
+        private MvxSubscriptionToken? _token_V_C_NChanged;
         private VoltageOutput? _v_a_n;
         private VoltageOutput? _v_b_n;
         private VoltageOutput? _v_c_n;
@@ -17,9 +19,19 @@ namespace QuickCMCDemo.MVVMCross.ViewModel
         #region Ctor
         public AnalogOutputsViewModel(IMvxMessenger messenger)
         {
-            _token = messenger?.Subscribe<V_A_NChanged>((res) =>
+            _token_V_A_NChanged = messenger?.Subscribe<V_A_NChanged>((res) =>
             {
                 V_A_N = res.NewV_A_NStatus;
+            });
+
+            _token_V_B_NChanged = messenger?.Subscribe<V_B_NChanged>((res) =>
+            {
+                V_B_N = res.NewV_B_NStatus;
+            });
+
+            _token_V_C_NChanged = messenger?.Subscribe<V_C_NChanged>((res) =>
+            {
+                V_C_N = res.NewV_C_NStatus;
             });
         }
         #endregion

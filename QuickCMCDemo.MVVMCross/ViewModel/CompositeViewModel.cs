@@ -30,6 +30,20 @@ namespace QuickCMCDemo.MVVMCross.ViewModel
                 Phase = random.NextDouble() * 120,
                 Magnitud = random.NextDouble()
             }));
+
+            _messenger?.Publish(new V_B_NChanged(this, new VoltageOutput()
+            {
+                Frequency = random.NextDouble() * 10 + 40,
+                Phase = random.NextDouble() * 120,
+                Magnitud = random.NextDouble()
+            }));
+
+            _messenger?.Publish(new V_C_NChanged(this, new VoltageOutput()
+            {
+                Frequency = random.NextDouble() * 10 + 40,
+                Phase = random.NextDouble() * 120,
+                Magnitud = random.NextDouble()
+            }));
         }
 
         #region Dependency Properties
