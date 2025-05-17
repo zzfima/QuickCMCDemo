@@ -15,5 +15,15 @@ namespace QuickCMC.UI
 
             DataContext = Mvx.IoCProvider?.Resolve<CompositeViewModel>();
         }
+
+        private void StartSimulation_Click(object sender, RoutedEventArgs e)
+        {
+            Mvx.IoCProvider?.Resolve<CompositeViewModel>()?.Simulate();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
