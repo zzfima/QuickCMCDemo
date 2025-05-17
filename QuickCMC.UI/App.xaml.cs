@@ -2,6 +2,7 @@
 using MvvmCross.Base;
 using MvvmCross.IoC;
 using MvvmCross.Plugin.Messenger;
+using QuickCMCDemo.MVVMCross.Randomizer;
 using QuickCMCDemo.MVVMCross.ViewModel;
 
 namespace QuickCMC.UI
@@ -24,6 +25,7 @@ namespace QuickCMC.UI
 
             //Core
             instance.ConstructAndRegisterSingleton<IMvxMessenger, MvxMessengerHub>();
+            instance.ConstructAndRegisterSingleton<IAnalogOutputsRandomizer, AnalogOutputsRandomizer>();
 
             //ViewModels
             instance.ConstructAndRegisterSingleton(typeof(AnalogOutputsViewModel));

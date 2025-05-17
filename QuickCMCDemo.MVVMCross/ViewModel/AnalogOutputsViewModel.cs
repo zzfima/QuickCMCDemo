@@ -13,10 +13,19 @@ namespace QuickCMCDemo.MVVMCross.ViewModel
         private MvxSubscriptionToken? _token_V_A_NChanged;
         private MvxSubscriptionToken? _token_V_B_NChanged;
         private MvxSubscriptionToken? _token_V_C_NChanged;
+        private MvxSubscriptionToken? _token_I_A_Changed;
+        private MvxSubscriptionToken? _token_I_B_Changed;
+        private MvxSubscriptionToken? _token_I_C_Changed;
         private MvxSubscriptionToken? _token_AnalogInputModeChanged;
-        private VoltageOutput? _v_a_n;
-        private VoltageOutput? _v_b_n;
-        private VoltageOutput? _v_c_n;
+
+        private AnalogOutput? _v_a_n;
+        private AnalogOutput? _v_b_n;
+        private AnalogOutput? _v_c_n;
+
+        private AnalogOutput? _i_a;
+        private AnalogOutput? _i_b;
+        private AnalogOutput? _i_c;
+
         private List<AnalogInputMode>? _allAnalogInputModes = new();
         private AnalogInputMode? _seletcedAnalogInputMode;
         #endregion
@@ -30,6 +39,7 @@ namespace QuickCMCDemo.MVVMCross.ViewModel
                 AllAnalogInputModes.Add((AnalogInputMode)value);
             }
 
+            //VOLTAGE
             _token_V_A_NChanged = messenger?.Subscribe<V_A_NChanged>((res) =>
             {
                 V_A_N = res.NewV_A_NStatus;
@@ -45,11 +55,23 @@ namespace QuickCMCDemo.MVVMCross.ViewModel
                 V_C_N = res.NewV_C_NStatus;
             });
 
-            _token_V_C_NChanged = messenger?.Subscribe<V_C_NChanged>((res) =>
+            //AMPERAGE
+            _token_I_A_Changed = messenger?.Subscribe<I_A_Changed>((res) =>
             {
-                V_C_N = res.NewV_C_NStatus;
+                I_A = res.NewI_A_Status;
             });
 
+            _token_I_B_Changed = messenger?.Subscribe<I_B_Changed>((res) =>
+            {
+                I_B = res.NewI_B_Status;
+            });
+
+            _token_I_C_Changed = messenger?.Subscribe<I_C_Changed>((res) =>
+            {
+                I_C = res.NewI_C_Status;
+            });
+
+            //ANALOG INPUT MODE
             _token_AnalogInputModeChanged = messenger?.Subscribe<AnalogInputModeChanged>((res) =>
             {
                 SeletcedAnalogInputMode = res.NewAnalogInputModeStatus;
@@ -58,24 +80,44 @@ namespace QuickCMCDemo.MVVMCross.ViewModel
         #endregion
 
         #region Properties
-        public VoltageOutput? V_A_N
+
+        //VOLTAGE
+        public AnalogOutput? V_A_N
         {
             get => _v_a_n;
             set => SetProperty(ref _v_a_n, value);
         }
 
-        public VoltageOutput? V_B_N
+        public AnalogOutput? V_B_N
         {
             get => _v_b_n;
             set => SetProperty(ref _v_b_n, value);
         }
 
-        public VoltageOutput? V_C_N
+        public AnalogOutput? V_C_N
         {
             get => _v_c_n;
             set => SetProperty(ref _v_c_n, value);
         }
 
+        //AMPERAGE
+        public AnalogOutput? I_A
+        {
+            get => _i_a;
+            set => SetProperty(ref _i_a, value);
+        }
+        public AnalogOutput? I_B
+        {
+            get => _i_b;
+            set => SetProperty(ref _i_b, value);
+        }
+        public AnalogOutput? I_C
+        {
+            get => _i_c;
+            set => SetProperty(ref _i_c, value);
+        }
+
+        //ANALOG INPUT MODE
         public List<AnalogInputMode>? AllAnalogInputModes
         {
             get => _allAnalogInputModes;

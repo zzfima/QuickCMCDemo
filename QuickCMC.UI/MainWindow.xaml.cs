@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using MvvmCross;
+using QuickCMCDemo.MVVMCross.Randomizer;
 using QuickCMCDemo.MVVMCross.ViewModel;
 
 namespace QuickCMC.UI
@@ -18,7 +19,7 @@ namespace QuickCMC.UI
 
         private void StartSimulation_Click(object sender, RoutedEventArgs e)
         {
-            Mvx.IoCProvider?.Resolve<CompositeViewModel>()?.Simulate();
+            Mvx.IoCProvider?.Resolve<IAnalogOutputsRandomizer>()?.Randomize();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
