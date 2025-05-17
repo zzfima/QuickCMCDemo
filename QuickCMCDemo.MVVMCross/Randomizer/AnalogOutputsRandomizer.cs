@@ -2,7 +2,6 @@
 using MvvmCross.Plugin.Messenger;
 using QuickCMCDemo.MVVMCross.Entities;
 using QuickCMCDemo.MVVMCross.Messages;
-using QuickCMCDemo.MVVMCross.ViewModel;
 
 namespace QuickCMCDemo.MVVMCross.Randomizer
 {
