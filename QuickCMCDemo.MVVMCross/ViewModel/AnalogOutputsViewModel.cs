@@ -1,9 +1,9 @@
 ﻿using MvvmCross.Plugin.Messenger;
 using MvvmCross.ViewModels;
 using QuickCMCDemo.MVVMCross.Entities;
-using RedisClient.MVVMCross.Messages;
+using QuickCMCDemo.MVVMCross.Messages;
 
-namespace RedisClient.MVVMCross.ViewModel
+namespace QuickCMCDemo.MVVMCross.ViewModel
 {
     public sealed class AnalogOutputsViewModel : MvxViewModel
     {

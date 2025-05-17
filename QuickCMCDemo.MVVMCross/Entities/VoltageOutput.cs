@@ -2,25 +2,25 @@
 
 namespace QuickCMCDemo.MVVMCross.Entities
 {
-    public class VoltageOutput : MvxViewModel
+    public class VoltageOutput : MvxNotifyPropertyChanged
     {
-        public float? _magnitud;
-        public float? _phase;
-        public float? _frequency;
+        private double _magnitud;
+        private double _phase;
+        private double _frequency;
 
-        public float? Magnitud
+        public double Magnitud
         {
             get => _magnitud;
             set => SetProperty(ref _magnitud, value);
         }
 
-        public float? Phase
+        public double Phase
         {
             get => _phase;
             set => SetProperty(ref _phase, value);
         }
 
-        public float? Frequency
+        public double Frequency
         {
             get => _frequency;
             set => SetProperty(ref _frequency, value);

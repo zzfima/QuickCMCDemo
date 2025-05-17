@@ -2,7 +2,7 @@
 using MvvmCross.Base;
 using MvvmCross.IoC;
 using MvvmCross.Plugin.Messenger;
-using RedisClient.MVVMCross.ViewModel;
+using QuickCMCDemo.MVVMCross.ViewModel;
 
 namespace QuickCMC.UI
 {

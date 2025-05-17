@@ -1,6 +1,6 @@
 ﻿using QuickCMCDemo.MVVMCross.Entities;
 
-namespace RedisClient.MVVMCross.Messages
+namespace QuickCMCDemo.MVVMCross.Messages
 {
     public class V_A_NChanged : MvvmCross.Plugin.Messenger.MvxMessage
     {

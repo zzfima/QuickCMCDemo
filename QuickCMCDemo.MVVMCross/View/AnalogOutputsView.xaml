@@ -4,8 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:QuickCMCDemo.MVVMCross.View"
+             xmlns:converters="clr-namespace:QuickCMCDemo.MVVMCross.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <converters:DecimalPlacesConverter x:Key="Decimal2" DecimalPlaces="2"/>
+        <converters:VoltsConverter x:Key="Volts"/>
+    </UserControl.Resources>
     <StackPanel Orientation="Vertical">
         <Label>Analog Outputs</Label>
         <Grid>
@@ -31,7 +36,7 @@
 
             <!--V A-N-->
             <Label Grid.Row="1" Grid.Column="0" Content="V A-N" />
-            <Label Grid.Row="1" Grid.Column="1" Content="{Binding V_A_N.Magnitud}" />
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding V_A_N.Magnitud, Converter={StaticResource Volts}}" />
             <Label Grid.Row="1" Grid.Column="2" Content="{Binding V_A_N.Phase}" />
             <Label Grid.Row="1" Grid.Column="3" Content="{Binding V_A_N.Frequency}" />
 

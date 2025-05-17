@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using MvvmCross;
-using RedisClient.MVVMCross.ViewModel;
+using QuickCMCDemo.MVVMCross.ViewModel;
 
 namespace QuickCMC.UI
 {
