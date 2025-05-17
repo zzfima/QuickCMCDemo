@@ -18,6 +18,25 @@
         </ResourceDictionary>
     </Window.Resources>
     <DockPanel>
+        <!-- Top Menu -->
+        <Menu DockPanel.Dock="Top" Height="80" Background="LightGray">
+            <MenuItem>
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical" Margin="5">
+                        <Image Source="/Icons/simulation.png" Width="32" Height="32"/>
+                        <TextBlock Text="Start simulation" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem>
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical" Margin="5">
+                        <Image Source="/Icons/power-button.png" Width="32" Height="32"/>
+                        <TextBlock Text="Exit" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+        </Menu>
         <Grid DockPanel.Dock="Top">
             <Grid.RowDefinitions>
                 <RowDefinition/>

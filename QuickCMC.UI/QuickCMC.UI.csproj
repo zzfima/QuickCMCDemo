@@ -8,15 +8,26 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Icons\power-button.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\QuickCMCDemo.MVVMCross\QuickCMCDemo.MVVMCross.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Folder Include="Docs\" />
+		<Folder Include="Icons\" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="MaterialDesignThemes" Version="5.2.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Icons\simulation.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 </Project>

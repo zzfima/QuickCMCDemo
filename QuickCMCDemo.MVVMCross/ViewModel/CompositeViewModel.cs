@@ -1,6 +1,4 @@
-﻿using MvvmCross;
-using MvvmCross.Plugin.Messenger;
-using MvvmCross.ViewModels;
+﻿using MvvmCross.ViewModels;
 
 namespace RedisClient.MVVMCross.ViewModel
 {
@@ -16,6 +14,11 @@ namespace RedisClient.MVVMCross.ViewModel
             AnalogOutputsVM = analogOutputsVM;
         }
         #endregion
+
+        public void StartSimulation()
+        {
+
+        }
 
         #region Dependency Properties
         public AnalogOutputsViewModel? AnalogOutputsVM

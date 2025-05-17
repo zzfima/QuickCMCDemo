@@ -1,13 +1,14 @@
 ﻿using MvvmCross.Plugin.Messenger;
 using MvvmCross.ViewModels;
 using QuickCMCDemo.MVVMCross.Entities;
+using RedisClient.MVVMCross.Messages;
 
 namespace RedisClient.MVVMCross.ViewModel
 {
     public sealed class AnalogOutputsViewModel : MvxViewModel
     {
         #region Fields
-        private IMvxMessenger? _messenger;
+        private MvxSubscriptionToken? _token;
         private VoltageOutput? _v_a_n;
         private VoltageOutput? _v_b_n;
         private VoltageOutput? _v_c_n;
@@ -16,7 +17,10 @@ namespace RedisClient.MVVMCross.ViewModel
         #region Ctor
         public AnalogOutputsViewModel(IMvxMessenger messenger)
         {
-            _messenger = messenger;
+            _token = messenger?.Subscribe<V_A_NChanged>((res) =>
+            {
+                V_A_N = res.NewV_A_NStatus;
+            });
         }
         #endregion
 
