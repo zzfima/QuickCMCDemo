@@ -4,7 +4,7 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickCMCDemo.MVVMCross", "QuickCMCDemo.MVVMCross\QuickCMCDemo.MVVMCross.csproj", "{327788C9-431B-4485-8992-9D28921C8868}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickCMC.UI", "QuickCMC.UI\QuickCMC.UI.csproj", "{E975A45A-5B48-4052-8439-4F170C352115}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickCMCDemo.UI", "QuickCMC.UI\QuickCMCDemo.UI.csproj", "{E975A45A-5B48-4052-8439-4F170C352115}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

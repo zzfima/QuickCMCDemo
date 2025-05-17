@@ -5,7 +5,7 @@ using MvvmCross.Plugin.Messenger;
 using QuickCMCDemo.MVVMCross.Randomizer;
 using QuickCMCDemo.MVVMCross.ViewModel;
 
-namespace QuickCMC.UI
+namespace QuickCMCDemo.UI
 {
     /// <summary>
     /// Interaction logic for App.xaml

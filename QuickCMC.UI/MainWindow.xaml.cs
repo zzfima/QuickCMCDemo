@@ -3,7 +3,7 @@ using MvvmCross;
 using QuickCMCDemo.MVVMCross.Randomizer;
 using QuickCMCDemo.MVVMCross.ViewModel;
 
-namespace QuickCMC.UI
+namespace QuickCMCDemo.UI
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
