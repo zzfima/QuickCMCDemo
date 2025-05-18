@@ -35,7 +35,7 @@
             </Grid.ColumnDefinitions>
 
             <!--Set Mode-->
-            <Label Background="#8898ad" Grid.Row="0" Grid.Column="0" Content="Set Mode" />
+            <Label Style="{DynamicResource MaterialDesignLabel}" Background="#8898ad" Grid.Row="0" Grid.Column="0" Content="Set Mode" />
             <ComboBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" ItemsSource="{Binding AllAnalogInputModes}" SelectedItem="{Binding SeletcedAnalogInputMode}" />
 
             <!--V A-N-->

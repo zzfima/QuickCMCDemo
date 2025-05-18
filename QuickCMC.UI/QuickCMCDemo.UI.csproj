@@ -23,6 +23,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="MaterialDesignThemes" Version="5.2.1" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Resource Include="Icons\power-button.png">
 	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 	  </Resource>

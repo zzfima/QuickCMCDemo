@@ -6,31 +6,31 @@
         xmlns:local="clr-namespace:QuickCMCDemo.UI"
         xmlns:view="clr-namespace:QuickCMCDemo.MVVMCross.View;assembly=QuickCMCDemo.MVVMCross"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="800">
+        Title="MainWindow" Height="600" Width="700">
     <DockPanel>
         <!-- Top Menu -->
         <Menu DockPanel.Dock="Top" Background="LightBlue">
-            <MenuItem Command="{Binding Path=StartSimulationCommand}" x:Name="startSimulationMenu">
+            <MenuItem Command="{Binding Path=StartSimulationCommand}" Margin="20">
                 <MenuItem.Header>
-                    <StackPanel Orientation="Vertical" Margin="5">
+                    <StackPanel Orientation="Vertical" >
                         <Image Source="/Icons/startSimulation.png" Width="32" Height="32"/>
-                        <TextBlock Text="Start simulation" HorizontalAlignment="Center"/>
+                        <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Start simulation" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </MenuItem.Header>
             </MenuItem>
-            <MenuItem Command="{Binding Path=StopSimulationCommand}" x:Name="stopSimulationMenu">
+            <MenuItem Command="{Binding Path=StopSimulationCommand}">
                 <MenuItem.Header>
-                    <StackPanel Orientation="Vertical" Margin="5">
+                    <StackPanel Orientation="Vertical">
                         <Image Source="/Icons/stopSimulation.png" Width="32" Height="32"/>
-                        <TextBlock Text="Stop simulation" HorizontalAlignment="Center"/>
+                        <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Stop simulation" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </MenuItem.Header>
             </MenuItem>
             <MenuItem Command="{Binding Path=ExitCommand}">
                 <MenuItem.Header>
-                    <StackPanel Orientation="Vertical" Margin="5">
+                    <StackPanel Orientation="Vertical">
                         <Image Source="/Icons/power-button.png" Width="32" Height="32"/>
-                        <TextBlock Text="Exit" HorizontalAlignment="Center"/>
+                        <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Exit" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </MenuItem.Header>
             </MenuItem>
@@ -44,7 +44,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <view:AnalogOutputsView Grid.Column="0" Grid.Row="0" Margin="10" DataContext="{Binding AnalogOutputsVM}" Width="300" HorizontalAlignment="Left"/>
+            <view:AnalogOutputsView Grid.Column="0" Grid.Row="0" DataContext="{Binding AnalogOutputsVM}" MinWidth="250" HorizontalAlignment="Left"/>
         </Grid>
     </DockPanel>
 </Window>
