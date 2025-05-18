@@ -7,10 +7,10 @@
         xmlns:view="clr-namespace:QuickCMCDemo.MVVMCross.View;assembly=QuickCMCDemo.MVVMCross"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="700">
-    <DockPanel>
+    <StackPanel x:Name="mainDockPanel">
         <!-- Top Menu -->
-        <Menu DockPanel.Dock="Top" Background="LightBlue">
-            <MenuItem Command="{Binding Path=StartSimulationCommand}" Margin="20">
+        <Menu Background="LightBlue">
+            <MenuItem Command="{Binding Path=StartSimulationCommand}" Margin="5">
                 <MenuItem.Header>
                     <StackPanel Orientation="Vertical" >
                         <Image Source="/Icons/startSimulation.png" Width="32" Height="32"/>
@@ -18,7 +18,7 @@
                     </StackPanel>
                 </MenuItem.Header>
             </MenuItem>
-            <MenuItem Command="{Binding Path=StopSimulationCommand}">
+            <MenuItem Command="{Binding Path=StopSimulationCommand}" Margin="5">
                 <MenuItem.Header>
                     <StackPanel Orientation="Vertical">
                         <Image Source="/Icons/stopSimulation.png" Width="32" Height="32"/>
@@ -26,7 +26,7 @@
                     </StackPanel>
                 </MenuItem.Header>
             </MenuItem>
-            <MenuItem Command="{Binding Path=ExitCommand}">
+            <MenuItem Command="{Binding Path=ExitCommand}" Margin="5">
                 <MenuItem.Header>
                     <StackPanel Orientation="Vertical">
                         <Image Source="/Icons/power-button.png" Width="32" Height="32"/>
@@ -35,7 +35,8 @@
                 </MenuItem.Header>
             </MenuItem>
         </Menu>
-        <Grid DockPanel.Dock="Top">
+        <Line Stroke="Blue" VerticalAlignment="Bottom" X1="0" X2="{Binding ActualWidth, ElementName=mainDockPanel}" StrokeThickness="2"/>
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -46,5 +47,5 @@
             </Grid.ColumnDefinitions>
             <view:AnalogOutputsView Grid.Column="0" Grid.Row="0" DataContext="{Binding AnalogOutputsVM}" MinWidth="250" HorizontalAlignment="Left"/>
         </Grid>
-    </DockPanel>
+    </StackPanel>
 </Window>

@@ -13,7 +13,7 @@
         <converters:FrequencyConverter x:Key="FrequencyConverter"/>
     </UserControl.Resources>
     <StackPanel Orientation="Vertical">
-        <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#6e7f92">Analog Outputs</Label>
+        <Label FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#6e7f92">Analog Outputs</Label>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -35,42 +35,41 @@
             </Grid.ColumnDefinitions>
 
             <!--Set Mode-->
-            <Label Style="{DynamicResource MaterialDesignLabel}" Background="#8898ad" Grid.Row="0" Grid.Column="0" Content="Set Mode" />
+            <Label FontWeight="Bold" Background="#8898ad" Grid.Row="0" Grid.Column="0" Content="Set Mode" />
             <ComboBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" ItemsSource="{Binding AllAnalogInputModes}" SelectedItem="{Binding SeletcedAnalogInputMode}" />
 
             <!--V A-N-->
-            <Label Background="#8898ad" Grid.Row="1" Grid.Column="0" Content="V A-N" />
+            <Label FontWeight="Bold" Background="#8898ad" Grid.Row="1" Grid.Column="0" Content="V A-N" />
             <Label Background="#d2e3f4" Grid.Row="1" Grid.Column="1" Content="{Binding V_A_N.Magnitude, Converter={StaticResource VoltsConverter}}" />
             <Label Background="#d2e3f4" Grid.Row="1" Grid.Column="2" Content="{Binding V_A_N.Phase, Converter={StaticResource PhaseConverter}}" />
             <Label Background="#d2e3f4" Grid.Row="1" Grid.Column="3" Content="{Binding V_A_N.Frequency, Converter={StaticResource FrequencyConverter}}" />
 
             <!--V B-N-->
-            <Label Background="#8898ad" Grid.Row="2" Grid.Column="0" Content="V B-N" />
+            <Label FontWeight="Bold" Background="#8898ad" Grid.Row="2" Grid.Column="0" Content="V B-N" />
             <Label Background="#d2e3f4" Grid.Row="2" Grid.Column="1" Content="{Binding V_B_N.Magnitude, Converter={StaticResource VoltsConverter}}" />
             <Label Background="#d2e3f4" Grid.Row="2" Grid.Column="2" Content="{Binding V_B_N.Phase, Converter={StaticResource PhaseConverter}}" />
             <Label Background="#d2e3f4" Grid.Row="2" Grid.Column="3" Content="{Binding V_B_N.Frequency, Converter={StaticResource FrequencyConverter}}" />
 
-
             <!--V C-N-->
-            <Label Background="#8898ad" Grid.Row="3" Grid.Column="0" Content="V C-N" />
+            <Label FontWeight="Bold" Background="#8898ad" Grid.Row="3" Grid.Column="0" Content="V C-N" />
             <Label Background="#d2e3f4" Grid.Row="3" Grid.Column="1" Content="{Binding V_C_N.Magnitude, Converter={StaticResource VoltsConverter}}" />
             <Label Background="#d2e3f4" Grid.Row="3" Grid.Column="2" Content="{Binding V_C_N.Phase, Converter={StaticResource PhaseConverter}}" />
             <Label Background="#d2e3f4" Grid.Row="3" Grid.Column="3" Content="{Binding V_C_N.Frequency, Converter={StaticResource FrequencyConverter}}" />
 
             <!--I A-->
-            <Label Background="#8898ad" Grid.Row="4" Grid.Column="0" Content="I A" />
+            <Label FontWeight="Bold" Background="#8898ad" Grid.Row="4" Grid.Column="0" Content="I A" />
             <Label Grid.Row="4" Grid.Column="1" Content="{Binding I_A.Magnitude, Converter={StaticResource AmperConverter}}" />
             <Label Grid.Row="4" Grid.Column="2" Content="{Binding I_A.Phase, Converter={StaticResource PhaseConverter}}" />
             <Label Grid.Row="4" Grid.Column="3" Content="{Binding I_A.Frequency, Converter={StaticResource FrequencyConverter}}" />
 
             <!--I B-->
-            <Label Background="#8898ad" Grid.Row="5" Grid.Column="0" Content="I B" />
+            <Label FontWeight="Bold" Background="#8898ad" Grid.Row="5" Grid.Column="0" Content="I B" />
             <Label Grid.Row="5" Grid.Column="1" Content="{Binding I_B.Magnitude, Converter={StaticResource AmperConverter}}" />
             <Label Grid.Row="5" Grid.Column="2" Content="{Binding I_B.Phase, Converter={StaticResource PhaseConverter}}" />
             <Label Grid.Row="5" Grid.Column="3" Content="{Binding I_B.Frequency, Converter={StaticResource FrequencyConverter}}" />
 
             <!--I C-->
-            <Label Background="#8898ad" Grid.Row="6" Grid.Column="0" Content="I C" />
+            <Label FontWeight="Bold" Background="#8898ad" Grid.Row="6" Grid.Column="0" Content="I C" />
             <Label Grid.Row="6" Grid.Column="1" Content="{Binding I_C.Magnitude, Converter={StaticResource AmperConverter}}" />
             <Label Grid.Row="6" Grid.Column="2" Content="{Binding I_C.Phase, Converter={StaticResource PhaseConverter}}" />
             <Label Grid.Row="6" Grid.Column="3" Content="{Binding I_C.Frequency, Converter={StaticResource FrequencyConverter}}" />
