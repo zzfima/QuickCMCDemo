@@ -6,12 +6,12 @@ using QuickCMCDemo.MVVMCross.Messages;
 
 namespace QuickCMCDemo.MVVMCross.Randomizer
 {
-	public class AnalogOutputsRandomizer : IAnalogOutputsRandomizer
+	public class AnalogOutputsSimulator : IAnalogOutputsSimulator
 	{
 		private readonly IMvxMessenger _messenger;
 		private bool _isSimulationRun = false;
 
-		public AnalogOutputsRandomizer(IMvxMessenger messenger)
+		public AnalogOutputsSimulator(IMvxMessenger messenger)
 		{
 			_messenger = messenger;
 		}

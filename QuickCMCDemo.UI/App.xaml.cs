@@ -25,7 +25,7 @@ namespace QuickCMCDemo.UI
 
             //Core
             instance.ConstructAndRegisterSingleton<IMvxMessenger, MvxMessengerHub>();
-            instance.ConstructAndRegisterSingleton<IAnalogOutputsRandomizer, AnalogOutputsRandomizer>();
+            instance.ConstructAndRegisterSingleton<IAnalogOutputsSimulator, AnalogOutputsSimulator>();
 
             //ViewModels
             instance.ConstructAndRegisterSingleton(typeof(AnalogOutputsViewModel));

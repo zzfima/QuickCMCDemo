@@ -2,7 +2,7 @@
 
 namespace QuickCMCDemo.MVVMCross.Randomizer
 {
-	public interface IAnalogOutputsRandomizer
+	public interface IAnalogOutputsSimulator
 	{
 		Task StartSimulation();
 		Task StopSimulation();

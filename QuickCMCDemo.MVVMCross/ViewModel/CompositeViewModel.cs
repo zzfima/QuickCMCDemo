@@ -43,12 +43,12 @@ namespace QuickCMCDemo.MVVMCross.ViewModel
 
 		private async Task StartSimulation()
 		{
-			await Mvx.IoCProvider?.Resolve<IAnalogOutputsRandomizer>()?.StartSimulation();
+			await Mvx.IoCProvider?.Resolve<IAnalogOutputsSimulator>()?.StartSimulation();
 		}
 
 		private async Task StopSimulation()
 		{
-			await Mvx.IoCProvider?.Resolve<IAnalogOutputsRandomizer>()?.StopSimulation();
+			await Mvx.IoCProvider?.Resolve<IAnalogOutputsSimulator>()?.StopSimulation();
 		}
 		#endregion
 	}
