@@ -10,7 +10,7 @@
     <DockPanel>
         <!-- Top Menu -->
         <Menu DockPanel.Dock="Top" Background="LightBlue">
-            <MenuItem Click="StartSimulation_Click" x:Name="startSimulationMenu">
+            <MenuItem Command="{Binding Path=StartSimulationCommand}" x:Name="startSimulationMenu">
                 <MenuItem.Header>
                     <StackPanel Orientation="Vertical" Margin="5">
                         <Image Source="/Icons/startSimulation.png" Width="32" Height="32"/>
@@ -18,7 +18,7 @@
                     </StackPanel>
                 </MenuItem.Header>
             </MenuItem>
-            <MenuItem Click="StopSimulation_Click" x:Name="stopSimulationMenu">
+            <MenuItem Command="{Binding Path=StopSimulationCommand}" x:Name="stopSimulationMenu">
                 <MenuItem.Header>
                     <StackPanel Orientation="Vertical" Margin="5">
                         <Image Source="/Icons/stopSimulation.png" Width="32" Height="32"/>
@@ -26,7 +26,7 @@
                     </StackPanel>
                 </MenuItem.Header>
             </MenuItem>
-            <MenuItem Click="Exit_Click">
+            <MenuItem Command="{Binding Path=ExitCommand}">
                 <MenuItem.Header>
                     <StackPanel Orientation="Vertical" Margin="5">
                         <Image Source="/Icons/power-button.png" Width="32" Height="32"/>
