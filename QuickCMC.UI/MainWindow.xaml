@@ -9,12 +9,20 @@
         Title="MainWindow" Height="650" Width="800">
     <DockPanel>
         <!-- Top Menu -->
-        <Menu DockPanel.Dock="Top" Background="LightGray">
-            <MenuItem Click="StartSimulation_Click">
+        <Menu DockPanel.Dock="Top" Background="LightBlue">
+            <MenuItem Click="StartSimulation_Click" x:Name="startSimulationMenu">
                 <MenuItem.Header>
                     <StackPanel Orientation="Vertical" Margin="5">
-                        <Image Source="/Icons/simulation.png" Width="32" Height="32"/>
+                        <Image Source="/Icons/startSimulation.png" Width="32" Height="32"/>
                         <TextBlock Text="Start simulation" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Click="StopSimulation_Click" x:Name="stopSimulationMenu">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Vertical" Margin="5">
+                        <Image Source="/Icons/stopSimulation.png" Width="32" Height="32"/>
+                        <TextBlock Text="Stop simulation" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </MenuItem.Header>
             </MenuItem>

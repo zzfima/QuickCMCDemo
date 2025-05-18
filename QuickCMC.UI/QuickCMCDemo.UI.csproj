@@ -10,6 +10,8 @@
 	<ItemGroup>
 	  <None Remove="Icons\power-button.png" />
 	  <None Remove="Icons\simulation.png" />
+	  <None Remove="Icons\startSimulation.png" />
+	  <None Remove="Icons\stopSimulation.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -24,7 +26,10 @@
 	  <Resource Include="Icons\power-button.png">
 	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 	  </Resource>
-	  <Resource Include="Icons\simulation.png">
+	  <Resource Include="Icons\startSimulation.png">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Icons\stopSimulation.png">
 	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 	  </Resource>
 	</ItemGroup>

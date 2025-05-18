@@ -1,7 +1,10 @@
-﻿namespace QuickCMCDemo.MVVMCross.Randomizer
+﻿using System.Threading.Tasks;
+
+namespace QuickCMCDemo.MVVMCross.Randomizer
 {
-    public interface IAnalogOutputsRandomizer
-    {
-        void Randomize();
-    }
+	public interface IAnalogOutputsRandomizer
+	{
+		Task StartSimulation();
+		Task StopSimulation();
+	}
 }

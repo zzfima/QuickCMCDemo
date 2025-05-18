@@ -5,26 +5,40 @@ using QuickCMCDemo.MVVMCross.ViewModel;
 
 namespace QuickCMCDemo.UI
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
-            InitializeComponent();
+	/// <summary>
+	/// Interaction logic for MainWindow.xaml
+	/// </summary>
+	public partial class MainWindow : Window
+	{
+		public MainWindow()
+		{
+			InitializeComponent();
 
-            DataContext = Mvx.IoCProvider?.Resolve<CompositeViewModel>();
-        }
+			startSimulationMenu.IsEnabled = true;
+			stopSimulationMenu.IsEnabled = false;
 
-        private void StartSimulation_Click(object sender, RoutedEventArgs e)
-        {
-            Mvx.IoCProvider?.Resolve<IAnalogOutputsRandomizer>()?.Randomize();
-        }
+			DataContext = Mvx.IoCProvider?.Resolve<CompositeViewModel>();
+		}
 
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-    }
+		private async void StartSimulation_Click(object sender, RoutedEventArgs e)
+		{
+			startSimulationMenu.IsEnabled = false;
+			stopSimulationMenu.IsEnabled = true;
+
+			await Mvx.IoCProvider?.Resolve<IAnalogOutputsRandomizer>()?.StartSimulation();
+		}
+
+		private async void StopSimulation_Click(object sender, RoutedEventArgs e)
+		{
+			startSimulationMenu.IsEnabled = true;
+			stopSimulationMenu.IsEnabled = false;
+
+			await Mvx.IoCProvider?.Resolve<IAnalogOutputsRandomizer>()?.StopSimulation();
+		}
+
+		private void Exit_Click(object sender, RoutedEventArgs e)
+		{
+			Application.Current.Shutdown();
+		}
+	}
 }
