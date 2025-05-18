@@ -40,38 +40,38 @@
 
             <!--V A-N-->
             <Label Background="#8898ad" Grid.Row="1" Grid.Column="0" Content="V A-N" />
-            <Label Background="#d2e3f4" Grid.Row="1" Grid.Column="1" Content="{Binding V_A_N.Magnitud, Converter={StaticResource VoltsConverter}}" />
+            <Label Background="#d2e3f4" Grid.Row="1" Grid.Column="1" Content="{Binding V_A_N.Magnitude, Converter={StaticResource VoltsConverter}}" />
             <Label Background="#d2e3f4" Grid.Row="1" Grid.Column="2" Content="{Binding V_A_N.Phase, Converter={StaticResource PhaseConverter}}" />
             <Label Background="#d2e3f4" Grid.Row="1" Grid.Column="3" Content="{Binding V_A_N.Frequency, Converter={StaticResource FrequencyConverter}}" />
 
             <!--V B-N-->
             <Label Background="#8898ad" Grid.Row="2" Grid.Column="0" Content="V B-N" />
-            <Label Background="#d2e3f4" Grid.Row="2" Grid.Column="1" Content="{Binding V_B_N.Magnitud, Converter={StaticResource VoltsConverter}}" />
+            <Label Background="#d2e3f4" Grid.Row="2" Grid.Column="1" Content="{Binding V_B_N.Magnitude, Converter={StaticResource VoltsConverter}}" />
             <Label Background="#d2e3f4" Grid.Row="2" Grid.Column="2" Content="{Binding V_B_N.Phase, Converter={StaticResource PhaseConverter}}" />
             <Label Background="#d2e3f4" Grid.Row="2" Grid.Column="3" Content="{Binding V_B_N.Frequency, Converter={StaticResource FrequencyConverter}}" />
 
 
             <!--V C-N-->
             <Label Background="#8898ad" Grid.Row="3" Grid.Column="0" Content="V C-N" />
-            <Label Background="#d2e3f4" Grid.Row="3" Grid.Column="1" Content="{Binding V_C_N.Magnitud, Converter={StaticResource VoltsConverter}}" />
+            <Label Background="#d2e3f4" Grid.Row="3" Grid.Column="1" Content="{Binding V_C_N.Magnitude, Converter={StaticResource VoltsConverter}}" />
             <Label Background="#d2e3f4" Grid.Row="3" Grid.Column="2" Content="{Binding V_C_N.Phase, Converter={StaticResource PhaseConverter}}" />
             <Label Background="#d2e3f4" Grid.Row="3" Grid.Column="3" Content="{Binding V_C_N.Frequency, Converter={StaticResource FrequencyConverter}}" />
 
             <!--I A-->
             <Label Background="#8898ad" Grid.Row="4" Grid.Column="0" Content="I A" />
-            <Label Grid.Row="4" Grid.Column="1" Content="{Binding I_A.Magnitud, Converter={StaticResource AmperConverter}}" />
+            <Label Grid.Row="4" Grid.Column="1" Content="{Binding I_A.Magnitude, Converter={StaticResource AmperConverter}}" />
             <Label Grid.Row="4" Grid.Column="2" Content="{Binding I_A.Phase, Converter={StaticResource PhaseConverter}}" />
             <Label Grid.Row="4" Grid.Column="3" Content="{Binding I_A.Frequency, Converter={StaticResource FrequencyConverter}}" />
 
             <!--I B-->
             <Label Background="#8898ad" Grid.Row="5" Grid.Column="0" Content="I B" />
-            <Label Grid.Row="5" Grid.Column="1" Content="{Binding I_B.Magnitud, Converter={StaticResource AmperConverter}}" />
+            <Label Grid.Row="5" Grid.Column="1" Content="{Binding I_B.Magnitude, Converter={StaticResource AmperConverter}}" />
             <Label Grid.Row="5" Grid.Column="2" Content="{Binding I_B.Phase, Converter={StaticResource PhaseConverter}}" />
             <Label Grid.Row="5" Grid.Column="3" Content="{Binding I_B.Frequency, Converter={StaticResource FrequencyConverter}}" />
 
             <!--I C-->
             <Label Background="#8898ad" Grid.Row="6" Grid.Column="0" Content="I C" />
-            <Label Grid.Row="6" Grid.Column="1" Content="{Binding I_C.Magnitud, Converter={StaticResource AmperConverter}}" />
+            <Label Grid.Row="6" Grid.Column="1" Content="{Binding I_C.Magnitude, Converter={StaticResource AmperConverter}}" />
             <Label Grid.Row="6" Grid.Column="2" Content="{Binding I_C.Phase, Converter={StaticResource PhaseConverter}}" />
             <Label Grid.Row="6" Grid.Column="3" Content="{Binding I_C.Frequency, Converter={StaticResource FrequencyConverter}}" />
         </Grid>
