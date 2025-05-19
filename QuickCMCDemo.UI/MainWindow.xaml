@@ -7,35 +7,56 @@
         xmlns:view="clr-namespace:QuickCMCDemo.MVVMCross.View;assembly=QuickCMCDemo.MVVMCross"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="700">
-    <StackPanel x:Name="mainDockPanel">
-        <!-- Top Menu -->
-        <Menu Background="LightBlue">
-            <MenuItem Command="{Binding Path=StartSimulationCommand}" Margin="5">
-                <MenuItem.Header>
-                    <StackPanel Orientation="Vertical" >
-                        <Image Source="/Icons/startSimulation.png" Width="32" Height="32"/>
-                        <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Start simulation" HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </MenuItem.Header>
-            </MenuItem>
-            <MenuItem Command="{Binding Path=StopSimulationCommand}" Margin="5">
-                <MenuItem.Header>
-                    <StackPanel Orientation="Vertical">
-                        <Image Source="/Icons/stopSimulation.png" Width="32" Height="32"/>
-                        <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Stop simulation" HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </MenuItem.Header>
-            </MenuItem>
-            <MenuItem Command="{Binding Path=ExitCommand}" Margin="5">
-                <MenuItem.Header>
-                    <StackPanel Orientation="Vertical">
-                        <Image Source="/Icons/power-button.png" Width="32" Height="32"/>
-                        <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Exit" HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </MenuItem.Header>
-            </MenuItem>
-        </Menu>
-        <Line Stroke="Blue" VerticalAlignment="Bottom" X1="0" X2="{Binding ActualWidth, ElementName=mainDockPanel}" StrokeThickness="2"/>
+
+    <DockPanel x:Name="mainDockPanel" LastChildFill="True">
+
+        <Grid DockPanel.Dock="Top" Background="LightBlue" Height="80">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Menu Background="LightBlue" VerticalAlignment="Center" Height="80">
+                <MenuItem Command="{Binding Path=StartSimulationCommand}" Margin="5">
+                    <MenuItem.Header>
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="/Icons/startSimulation.png" Width="32" Height="32"/>
+                            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Start simulation" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </MenuItem.Header>
+                </MenuItem>
+                <MenuItem Command="{Binding Path=StopSimulationCommand}" Margin="5">
+                    <MenuItem.Header>
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="/Icons/stopSimulation.png" Width="32" Height="32"/>
+                            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Stop simulation" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </MenuItem.Header>
+                </MenuItem>
+                <MenuItem Command="{Binding Path=ExitCommand}" Margin="5">
+                    <MenuItem.Header>
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="/Icons/power-button.png" Width="32" Height="32"/>
+                            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Exit" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </MenuItem.Header>
+                </MenuItem>
+            </Menu>
+
+            <Image Grid.Column="1"
+                   Source="/Icons/cmc500.png"
+                   Width="70" Height="70"
+                   Margin="10"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Right"/>
+        </Grid>
+
+        <Line Stroke="Blue"
+              VerticalAlignment="Bottom"
+              X1="0" X2="{Binding ActualWidth, ElementName=mainDockPanel}"
+              StrokeThickness="2"
+              DockPanel.Dock="Top"/>
+
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -45,7 +66,12 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <view:AnalogOutputsView Grid.Column="0" Grid.Row="0" DataContext="{Binding AnalogOutputsVM}" MinWidth="250" HorizontalAlignment="Left"/>
+
+            <view:AnalogOutputsView Grid.Column="0"
+                                    Grid.Row="0"
+                                    DataContext="{Binding AnalogOutputsVM}"
+                                    MinWidth="250"
+                                    HorizontalAlignment="Left"/>
         </Grid>
-    </StackPanel>
+    </DockPanel>
 </Window>

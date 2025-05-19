@@ -8,6 +8,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Icons\cmc500.png" />
 	  <None Remove="Icons\power-button.png" />
 	  <None Remove="Icons\simulation.png" />
 	  <None Remove="Icons\startSimulation.png" />
@@ -27,6 +28,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Resource Include="Icons\cmc500.png">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Resource>
 	  <Resource Include="Icons\power-button.png">
 	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 	  </Resource>
