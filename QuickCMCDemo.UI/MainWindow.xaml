@@ -17,7 +17,7 @@
             </Grid.ColumnDefinitions>
 
             <Menu Background="LightBlue" VerticalAlignment="Center" Height="80">
-                <MenuItem Command="{Binding Path=StartSimulationCommand}" Margin="5">
+                <MenuItem Command="{Binding Path=StartSimulationCommand}" Margin="10">
                     <MenuItem.Header>
                         <StackPanel Orientation="Vertical">
                             <Image Source="/Icons/startSimulation.png" Width="32" Height="32"/>
@@ -25,7 +25,7 @@
                         </StackPanel>
                     </MenuItem.Header>
                 </MenuItem>
-                <MenuItem Command="{Binding Path=StopSimulationCommand}" Margin="5">
+                <MenuItem Command="{Binding Path=StopSimulationCommand}" Margin="10">
                     <MenuItem.Header>
                         <StackPanel Orientation="Vertical">
                             <Image Source="/Icons/stopSimulation.png" Width="32" Height="32"/>
@@ -33,7 +33,7 @@
                         </StackPanel>
                     </MenuItem.Header>
                 </MenuItem>
-                <MenuItem Command="{Binding Path=ExitCommand}" Margin="5">
+                <MenuItem Command="{Binding Path=ExitCommand}" Margin="10">
                     <MenuItem.Header>
                         <StackPanel Orientation="Vertical">
                             <Image Source="/Icons/power-button.png" Width="32" Height="32"/>
