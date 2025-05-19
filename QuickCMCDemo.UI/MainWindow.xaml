@@ -7,6 +7,23 @@
         xmlns:view="clr-namespace:QuickCMCDemo.MVVMCross.View;assembly=QuickCMCDemo.MVVMCross"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="700">
+    <Window.Resources>
+        <!--Control template-->
+        <Style TargetType="Image" x:Key="RotateOnLoadStyle">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard RepeatBehavior="1x">
+                            <DoubleAnimation
+                                Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)"
+                                From="0" To="360"
+                                Duration="0:0:2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
 
     <DockPanel x:Name="mainDockPanel" LastChildFill="True">
 
@@ -48,7 +65,13 @@
                    Width="70" Height="70"
                    Margin="10"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Right"/>
+                   HorizontalAlignment="Right"
+                   Style="{StaticResource RotateOnLoadStyle}"
+                   RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <RotateTransform />
+                </Image.RenderTransform>
+            </Image>
         </Grid>
 
         <Line Stroke="Blue"
