@@ -8,10 +8,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="700">
     <Window.Resources>
-        <!--Control template-->
+        <!--Control template with trigger-->
         <Style TargetType="Image" x:Key="RotateOnLoadStyle">
             <Style.Triggers>
-                <EventTrigger RoutedEvent="Image.Loaded">
+                <EventTrigger RoutedEvent="Image.MouseEnter">
                     <BeginStoryboard>
                         <Storyboard RepeatBehavior="1x">
                             <DoubleAnimation
