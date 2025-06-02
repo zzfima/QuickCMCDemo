@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuickCMCDemo.UI"
         xmlns:view="clr-namespace:QuickCMCDemo.MVVMCross.View;assembly=QuickCMCDemo.MVVMCross"
+        xmlns:p="clr-namespace:QuickCMCDemo.UI.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="700">
     <Window.Resources>
@@ -38,7 +39,7 @@
                     <MenuItem.Header>
                         <StackPanel Orientation="Vertical">
                             <Image Source="/Icons/startSimulation.png" Width="32" Height="32"/>
-                            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Start simulation" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="{x:Static p:Resources.start_simulation}" HorizontalAlignment="Center"/>
                         </StackPanel>
                     </MenuItem.Header>
                 </MenuItem>
@@ -46,7 +47,7 @@
                     <MenuItem.Header>
                         <StackPanel Orientation="Vertical">
                             <Image Source="/Icons/stopSimulation.png" Width="32" Height="32"/>
-                            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Stop simulation" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="{x:Static p:Resources.stop_simulation}" HorizontalAlignment="Center"/>
                         </StackPanel>
                     </MenuItem.Header>
                 </MenuItem>
@@ -54,7 +55,7 @@
                     <MenuItem.Header>
                         <StackPanel Orientation="Vertical">
                             <Image Source="/Icons/power-button.png" Width="32" Height="32"/>
-                            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Exit" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="{x:Static p:Resources.exit}" HorizontalAlignment="Center"/>
                         </StackPanel>
                     </MenuItem.Header>
                 </MenuItem>

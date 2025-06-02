@@ -17,6 +17,9 @@ namespace QuickCMCDemo.UI
         public App()
         {
             ConfigureServices();
+
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("de"); 
         }
 
         private void ConfigureServices()
